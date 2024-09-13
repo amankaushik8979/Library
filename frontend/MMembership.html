@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of Active Memberships</title>
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Button styling */
+        .btn {
+            
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 30px 20px;
+         
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Logout button styling */
+        .logout {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .logout:hover {
+            background-color: darkred;
+        }
+
+        /* Button group */
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Central Heading -->
+        <h1>List of Active Memberships</h1>
+
+        <!-- Table with membership details -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Membership Id</th>
+                    <th>Name of Member</th>
+                    <th>Contact Number</th>
+                    <th>Contact Address</th>
+                    <th>Aadhar Card No</th>
+                    <th>Start Date of Membership</th>
+                    <th>End Date of Membership</th>
+                    <th>Status (Active/Inactive)</th>
+                    <th>Amount Pending (Fine)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example rows (these can be replaced with actual data) -->
+                <tr>
+                    <td>1</td>
+                    <td>Member 1</td>
+                    <td>9876543210</td>
+                    <td>Address 1</td>
+                    <td>1234-5678-9101</td>
+                    <td>2023-01-01</td>
+                    <td>2024-01-01</td>
+                    <td>Active</td>
+                    <td>$0</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Member 2</td>
+                    <td>9876543211</td>
+                    <td>Address 2</td>
+                    <td>1234-5678-9102</td>
+                    <td>2022-01-01</td>
+                    <td>2023-01-01</td>
+                    <td>Inactive</td>
+                    <td>$10</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <!-- Buttons for Back and Confirm -->
+        <div class="buttons">
+            <button class="btn" id="backButton">Back</button>
+            <button class="btn" id="confirmButton">Confirm</button>
+        </div>
+
+        <!-- Logout button at the bottom-right of the container -->
+        <button class="logout" id="logoutButton">Log Out</button>
+    </div>
+
+    <script>
+        // Ensure the script runs after the DOM is fully loaded
+        window.onload = function() {
+            // Handle Log Out button
+            const logoutButton = document.getElementById("logoutButton");
+            if (logoutButton) {
+                logoutButton.addEventListener("click", function() {
+                    window.location.href = "index.html"; // Redirect to index.html
+                });
+            }
+
+            // Handle Back button
+            const backButton = document.getElementById("backButton");
+            if (backButton) {
+                backButton.addEventListener("click", function() {
+                    window.location.href = "reports.html"; // Redirect to reports.html
+                });
+            }
+
+            // Handle Confirm button
+            const confirmButton = document.getElementById("confirmButton");
+            if (confirmButton) {
+                confirmButton.addEventListener("click", function() {
+                    window.location.href = "confirm.html"; // Redirect to confirm.html
+                });
+            }
+        };
+    </script>
+</body>
+</html>

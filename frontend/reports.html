@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Available Reports</title>
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative; /* To allow absolute positioning inside the container */
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            width: 100%; /* Full width for a uniform look */
+            text-align: left; /* Align text to the left */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Logout button styling */
+        .logout {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .logout:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Central Heading -->
+        <h1>Available Reports</h1>
+
+        <!-- Reports Buttons -->
+        <button onclick="window.location.href='MBooks.html'" class="btn">Master List of Books</button>
+        <button onclick="window.location.href='MMovies.html'" class="btn">Master List of Movies</button>
+        <button onclick="window.location.href='MMembership.html'" class="btn">Master List of Memberships</button>
+        <button onclick="window.location.href='MIssue.html'" class="btn">Active Issues</button>
+        <button onclick="window.location.href='OverdueReturns.html'" class="btn">Overdue returns</button>
+        <button onclick="window.location.href='IssueReq.html'" class="btn">Pending Issue Requests</button>
+        
+        <br>
+        <br>
+        <br>
+        <!-- Logout button at the bottom-right of the container -->
+        <button class="logout" id="logoutButton">Log Out</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

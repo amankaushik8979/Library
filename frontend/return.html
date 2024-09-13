@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Return Book</title>
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: left;
+        }
+
+        /* Input and select styling */
+        input[type="text"], textarea, select, input[type="date"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 1rem;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Logout button styling */
+        .logout {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .logout:hover {
+            background-color: darkred;
+        }
+
+        /* Button group at the bottom */
+        .buttons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Central Heading -->
+        <h1>Return Book</h1>
+
+        <!-- Form with return book fields -->
+        <table>
+            <tr>
+                <th>Enter Book Name</th>
+                <td>
+                    <select>
+                        <option>Drop Down</option>
+                        <!-- Add more options here -->
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Enter Author</th>
+                <td><textarea rows="2" placeholder="Enter Author Name"></textarea></td>
+            </tr>
+            <tr>
+                <th>Serial No</th>
+                <td>
+                    <select>
+                        <option>Drop Down</option>
+                        <!-- Add more options here -->
+                    </select>
+                </td>
+                <td>Mandatory</td>
+            </tr>
+            <tr>
+                <th>Issue Date</th>
+                <td><input type="text" placeholder="Enter Issue Date"></td>
+            </tr>
+            <tr>
+                <th>Return Date</th>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <th>Remarks</th>
+                <td><textarea rows="3" placeholder="Remarks (Non-Mandatory)"></textarea></td>
+            </tr>
+        </table>
+
+        <!-- Buttons for Cancel and Confirm -->
+        <div class="buttons">
+            <button class="btn" id="cancelButton">Cancel</button>
+            <button class="btn" id="confirmButton">Confirm</button>
+        </div>
+
+        <!-- Logout button at the bottom-right of the container -->
+        <button class="logout" id="logoutButton">Log Out</button>
+    </div>
+
+    <script>
+        // Ensure the script runs after the DOM is fully loaded
+        window.onload = function() {
+            // Handle Log Out button
+            const logoutButton = document.getElementById("logoutButton");
+            if (logoutButton) {
+                logoutButton.addEventListener("click", function() {
+                    window.location.href = "index.html"; // Redirect to index.html
+                });
+            }
+
+            // Handle Cancel button
+            const cancelButton = document.getElementById("cancelButton");
+            if (cancelButton) {
+                cancelButton.addEventListener("click", function() {
+                    window.location.href = "isbooksearch.html"; // Redirect to isbooksearch.html
+                });
+            }
+
+            // Handle Confirm button
+            const confirmButton = document.getElementById("confirmButton");
+            if (confirmButton) {
+                confirmButton.addEventListener("click", function() {
+                    window.location.href = "fine.html"; // Redirect to fine.html
+                });
+            }
+        };
+    </script>
+</body>
+</html>

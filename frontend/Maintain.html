@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housekeeping</title>
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative; /* To allow absolute positioning inside the container */
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 15px;
+            text-align: center;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Logout button styling */
+        .logout {
+            position: absolute;
+            bottom: 10px;
+            right: 8px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .logout:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Central Heading -->
+        <h1>Housekeeping</h1>
+
+        <!-- Maintenance Options Table -->
+        <table>
+            <tr>
+                <td>Membership</td>
+                <td><button onclick="window.location.href='M1.html'" class="btn">Add</button></td>
+                <td><button onclick="window.location.href='M2.html'"class="btn">Update</button></td>
+            </tr>
+            <tr>
+                <td>Books/Movies</td>
+                <td><button onclick="window.location.href='M3.html'"class="btn">Add</button></td>
+                <td><button onclick="window.location.href='M4.html'"class="btn">Update</button></td>
+            </tr>
+            <tr>
+                <td>User Management</td>
+                <td><button onclick="window.location.href='M5.html'"class="btn">Add</button></td>
+                <td><button onclick="window.location.href='M5.html'"class="btn">Update</button></td>
+            </tr>
+        </table>
+        <br>
+        <br>
+
+        <!-- Logout button at the bottom-right of the container -->
+        <button class="logout" id="logoutButton">Log Out</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

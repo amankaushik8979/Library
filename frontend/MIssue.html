@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Issues</title>
+    <style>
+        /* General styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Container styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Heading style */
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        /* Table styling */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table th, table td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Button styling */
+        .btn {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Logout button styling */
+        .logout {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .logout:hover {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Central Heading -->
+        <h1>Active Issues</h1>
+
+        <!-- Table with active issue details -->
+        <table>
+            <thead>
+                <tr>
+                    <th>Serial No Book/Movie</th>
+                    <th>Name of Book/Movie</th>
+                    <th>Membership Id</th>
+                    <th>Date of Issue</th>
+                    <th>Date of Return</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example rows (these can be replaced with actual data) -->
+                <tr>
+                    <td>1</td>
+                    <td>Book 1</td>
+                    <td>12345</td>
+                    <td>2023-01-01</td>
+                    <td>2023-02-01</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Movie 1</td>
+                    <td>12346</td>
+                    <td>2023-01-05</td>
+                    <td>2023-02-05</td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+
+        <!-- Back button -->
+        <button class="btn" id="backButton">Back</button>
+
+        <!-- Logout button at the bottom-right of the container -->
+        <button class="logout" id="logoutButton">Log Out</button>
+    </div>
+
+    <script>
+        // Ensure the script runs after the DOM is fully loaded
+        window.onload = function() {
+            // Handle Log Out button
+            const logoutButton = document.getElementById("logoutButton");
+            if (logoutButton) {
+                logoutButton.addEventListener("click", function() {
+                    window.location.href = "index.html"; // Redirect to index.html
+                });
+            }
+
+            // Handle Back button
+            const backButton = document.getElementById("backButton");
+            if (backButton) {
+                backButton.addEventListener("click", function() {
+                    window.location.href = "reports.html"; // Redirect to reports.html
+                });
+            }
+        };
+    </script>
+</body>
+</html>
