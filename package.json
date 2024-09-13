@@ -1,0 +1,20 @@
+{
+  "name": "LibraryMS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/amankaushik8979/Library.git",
+  "author": "amankaushik8979 <amankaushik162002@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "serve": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "mongoose": "^8.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
