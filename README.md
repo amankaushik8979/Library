@@ -1,0 +1,2 @@
+This Library Management System is created using HTML,CSS and JavaScript and backend using Node and Express and mongoDB for data storage.
+Click on the link to view the deployed website- https://library-ms-omega.vercel.app
